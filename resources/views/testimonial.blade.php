@@ -36,7 +36,7 @@
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>
-        <i class="fa fa-laptop-code fa-2x text-primary position-absolute top-50 start-50 translate-middle"></i>
+        <img class="logo position-absolute top-50 start-50 translate-middle" src="img/logo.png">
     </div>
     <!-- Spinner End -->
 
@@ -137,13 +137,13 @@
                         <a href="{{ route('feature') }}" class="dropdown-item">Features</a>
                         <a href="{{ route('team') }}" class="dropdown-item">Our Team</a>
                         <a href="{{ route('testimonial') }}" class="dropdown-item active">Testimonial</a>
-                        <a href="{{ url('404.html') }}" class="dropdown-item">404 Page</a> <!-- Assuming '404.html' is a static page -->
+                       
                     </div>
                 </div>
                 <a href="{{ route('contact') }}" class="nav-item nav-link">Contact Us</a>
                 
             </div>
-            <a href="#" class="btn btn-sm btn-light rounded-pill py-2 px-4 d-none d-lg-block">Get Started</a>
+            <a href="{{route('contact')}}" class="btn btn-sm btn-light rounded-pill py-2 px-4 d-none d-lg-block">Get Started</a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -177,45 +177,46 @@
                     <div class="d-flex align-items-center mb-4">
                         <img class="flex-shrink-0 rounded-circle border p-1" src="img/testimonial-1.jpg" alt="">
                         <div class="ms-4">
-                            <h5 class="mb-1">Client Name</h5>
-                            <span>Profession</span>
+                            <h5 class="mb-1">Reynand Sabas</h5>
+                            <span>Developer</span>
                         </div>
                     </div>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    <p class="mb-0">"Working with this team has been an amazing experience! Their dedication to excellence and their attention to detail are unmatched. I highly recommend their services for anyone looking to take their business to the next level!"</p>
                 </div>
                 <div class="testimonial-item bg-light rounded p-4">
                     <div class="d-flex align-items-center mb-4">
                         <img class="flex-shrink-0 rounded-circle border p-1" src="img/testimonial-2.jpg" alt="">
                         <div class="ms-4">
-                            <h5 class="mb-1">Client Name</h5>
-                            <span>Profession</span>
+                            <h5 class="mb-1">Jenny Batal</h5>
+                            <span>Developer</span>
                         </div>
                     </div>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    <p class="mb-0">"I am incredibly impressed with the service provided! The team understood my needs and delivered the perfect solution. I couldn't be happier with the results!"</p>
                 </div>
                 <div class="testimonial-item bg-light rounded p-4">
                     <div class="d-flex align-items-center mb-4">
                         <img class="flex-shrink-0 rounded-circle border p-1" src="img/testimonial-3.jpg" alt="">
                         <div class="ms-4">
-                            <h5 class="mb-1">Client Name</h5>
-                            <span>Profession</span>
+                            <h5 class="mb-1">Jerome Porcado</h5>
+                            <span>Developer</span>
                         </div>
                     </div>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    <p class="mb-0">"A fantastic experience from start to finish. The team went above and beyond to make sure everything was perfect. I'm so grateful for their expertise and professionalism!"</p>
                 </div>
                 <div class="testimonial-item bg-light rounded p-4">
                     <div class="d-flex align-items-center mb-4">
                         <img class="flex-shrink-0 rounded-circle border p-1" src="img/testimonial-4.jpg" alt="">
                         <div class="ms-4">
-                            <h5 class="mb-1">Client Name</h5>
-                            <span>Profession</span>
+                            <h5 class="mb-1">Kim John Sagala</h5>
+                            <span>Developer</span>
                         </div>
                     </div>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    <p class="mb-0">"I had an exceptional experience working with this team. They listened to my needs, provided valuable insights, and delivered outstanding results that exceeded my expectations!"</p>
                 </div>
             </div>
         </div>
     </div>
+    
     <!-- Testimonial End -->
 
 

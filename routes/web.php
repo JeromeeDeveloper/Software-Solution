@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
 
 Route::get('/', function () {
     return view('index');
@@ -13,6 +14,8 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
+
+Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');
 
 Route::get('/feature', function () {
     return view('feature');
@@ -34,6 +37,6 @@ Route::get('/testimonial', function () {
     return view('testimonial');
 })->name('testimonial');
 
-Route::get('/404', function () {
-    return view('404');
-})->name('404');
+Route::get('/success', function () {
+    return view('success');
+})->name('success');

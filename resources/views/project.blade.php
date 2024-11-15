@@ -36,7 +36,7 @@
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>
-        <i class="fa fa-laptop-code fa-2x text-primary position-absolute top-50 start-50 translate-middle"></i>
+        <img class="logo position-absolute top-50 start-50 translate-middle" src="img/logo.png">
     </div>
     <!-- Spinner End -->
 
@@ -137,12 +137,12 @@
                         <a href="{{ route('feature') }}" class="dropdown-item">Features</a>
                         <a href="{{ route('team') }}" class="dropdown-item">Our Team</a>
                         <a href="{{ route('testimonial') }}" class="dropdown-item">Testimonial</a>
-                        <a href="{{ url('404.html') }}" class="dropdown-item">404 Page</a> <!-- Assuming '404.html' is a static page -->
+                      
                     </div>
                 </div>
                 <a href="{{ route('contact') }}" class="nav-item nav-link">Contact Us</a>                
             </div>
-            <a href="#" class="btn btn-sm btn-light rounded-pill py-2 px-4 d-none d-lg-block">Get Started</a>
+            <a href="{{route('contact')}}" class="btn btn-sm btn-light rounded-pill py-2 px-4 d-none d-lg-block">Get Started</a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -165,7 +165,7 @@
 
 
     <!-- Project Start -->
-    <div class="container-xxl py-5">
+    <div id="project" class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <h6 class="section-title bg-white text-center text-primary px-3">Our Projects</h6>
@@ -177,84 +177,85 @@
                         <img class="img-fluid rounded" src="img/project-1.jpg" alt="">
                         <a href="img/project-1.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
                     </div>
-                    <h6>UI / UX Design</h6>
-                    <span>Digital agency website design and development</span>
+                    <h6>Ginto AI</h6>
+                    <span>Assistance AI project</span>
                 </div>
                 <div class="project-item border rounded h-100 p-4" data-dot="02">
                     <div class="position-relative mb-4">
                         <img class="img-fluid rounded" src="img/project-2.jpg" alt="">
                         <a href="img/project-2.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
                     </div>
-                    <h6>UI / UX Design</h6>
-                    <span>Digital agency website design and development</span>
+                    <h6>ArtQ AI</h6>
+                    <span>AI Image Generation</span>
                 </div>
                 <div class="project-item border rounded h-100 p-4" data-dot="03">
                     <div class="position-relative mb-4">
                         <img class="img-fluid rounded" src="img/project-3.jpg" alt="">
                         <a href="img/project-2.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
                     </div>
-                    <h6>UI / UX Design</h6>
-                    <span>Digital agency website design and development</span>
+                    <h6>QR System</h6>
+                    <span>QR code-based attendance system</span>
                 </div>
                 <div class="project-item border rounded h-100 p-4" data-dot="04">
                     <div class="position-relative mb-4">
                         <img class="img-fluid rounded" src="img/project-4.jpg" alt="">
                         <a href="img/project-4.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
                     </div>
-                    <h6>UI / UX Design</h6>
-                    <span>Digital agency website design and development</span>
+                    <h6>Ecommerce Website</h6>
+                    <span>Online shopping platform</span>
                 </div>
                 <div class="project-item border rounded h-100 p-4" data-dot="05">
                     <div class="position-relative mb-4">
                         <img class="img-fluid rounded" src="img/project-5.jpg" alt="">
                         <a href="img/project-5.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
                     </div>
-                    <h6>UI / UX Design</h6>
-                    <span>Digital agency website design and development</span>
+                    <h6>Software Solutions</h6>
+                    <span>Custom software development for businesses</span>
                 </div>
                 <div class="project-item border rounded h-100 p-4" data-dot="06">
                     <div class="position-relative mb-4">
                         <img class="img-fluid rounded" src="img/project-6.jpg" alt="">
                         <a href="img/project-6.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
                     </div>
-                    <h6>UI / UX Design</h6>
-                    <span>Digital agency website design and development</span>
+                    <h6>Website Development</h6>
+                    <span>Professional business websites</span>
                 </div>
                 <div class="project-item border rounded h-100 p-4" data-dot="07">
                     <div class="position-relative mb-4">
                         <img class="img-fluid rounded" src="img/project-7.jpg" alt="">
                         <a href="img/project-7.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
                     </div>
-                    <h6>UI / UX Design</h6>
-                    <span>Digital agency website design and development</span>
+                    <h6>Portfolio Website</h6>
+                    <span>Showcase for individual portfolios</span>
                 </div>
                 <div class="project-item border rounded h-100 p-4" data-dot="08">
                     <div class="position-relative mb-4">
                         <img class="img-fluid rounded" src="img/project-8.jpg" alt="">
                         <a href="img/project-8.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
                     </div>
-                    <h6>UI / UX Design</h6>
-                    <span>Digital agency website design and development</span>
+                    <h6>Business Solutions</h6>
+                    <span>Complete web solutions for business needs</span>
                 </div>
                 <div class="project-item border rounded h-100 p-4" data-dot="09">
                     <div class="position-relative mb-4">
                         <img class="img-fluid rounded" src="img/project-9.jpg" alt="">
                         <a href="img/project-9.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
                     </div>
-                    <h6>UI / UX Design</h6>
-                    <span>Digital agency website design and development</span>
+                    <h6>Marketing Website</h6>
+                    <span>Websites focused on marketing solutions</span>
                 </div>
                 <div class="project-item border rounded h-100 p-4" data-dot="10">
                     <div class="position-relative mb-4">
                         <img class="img-fluid rounded" src="img/project-10.jpg" alt="">
                         <a href="img/project-10.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
                     </div>
-                    <h6>UI / UX Design</h6>
-                    <span>Digital agency website design and development</span>
+                    <h6>Landing Page</h6>
+                    <span>High-conversion landing pages</span>
                 </div>
             </div>
         </div>
     </div>
+    
     <!-- Project End -->
 
 
@@ -270,45 +271,46 @@
                     <div class="d-flex align-items-center mb-4">
                         <img class="flex-shrink-0 rounded-circle border p-1" src="img/testimonial-1.jpg" alt="">
                         <div class="ms-4">
-                            <h5 class="mb-1">Client Name</h5>
-                            <span>Profession</span>
+                            <h5 class="mb-1">Reynand Sabas</h5>
+                            <span>Developer</span>
                         </div>
                     </div>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    <p class="mb-0">"Working with this team has been an amazing experience! Their dedication to excellence and their attention to detail are unmatched. I highly recommend their services for anyone looking to take their business to the next level!"</p>
                 </div>
                 <div class="testimonial-item bg-light rounded p-4">
                     <div class="d-flex align-items-center mb-4">
                         <img class="flex-shrink-0 rounded-circle border p-1" src="img/testimonial-2.jpg" alt="">
                         <div class="ms-4">
-                            <h5 class="mb-1">Client Name</h5>
-                            <span>Profession</span>
+                            <h5 class="mb-1">Jenny Batal</h5>
+                            <span>Developer</span>
                         </div>
                     </div>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    <p class="mb-0">"I am incredibly impressed with the service provided! The team understood my needs and delivered the perfect solution. I couldn't be happier with the results!"</p>
                 </div>
                 <div class="testimonial-item bg-light rounded p-4">
                     <div class="d-flex align-items-center mb-4">
                         <img class="flex-shrink-0 rounded-circle border p-1" src="img/testimonial-3.jpg" alt="">
                         <div class="ms-4">
-                            <h5 class="mb-1">Client Name</h5>
-                            <span>Profession</span>
+                            <h5 class="mb-1">Jerome Porcado</h5>
+                            <span>Developer</span>
                         </div>
                     </div>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    <p class="mb-0">"A fantastic experience from start to finish. The team went above and beyond to make sure everything was perfect. I'm so grateful for their expertise and professionalism!"</p>
                 </div>
                 <div class="testimonial-item bg-light rounded p-4">
                     <div class="d-flex align-items-center mb-4">
                         <img class="flex-shrink-0 rounded-circle border p-1" src="img/testimonial-4.jpg" alt="">
                         <div class="ms-4">
-                            <h5 class="mb-1">Client Name</h5>
-                            <span>Profession</span>
+                            <h5 class="mb-1">Kim John Sagala</h5>
+                            <span>Developer</span>
                         </div>
                     </div>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    <p class="mb-0">"I had an exceptional experience working with this team. They listened to my needs, provided valuable insights, and delivered outstanding results that exceeded my expectations!"</p>
                 </div>
             </div>
         </div>
     </div>
+    
     <!-- Testimonial End -->
 
 

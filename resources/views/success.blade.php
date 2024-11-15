@@ -36,7 +36,7 @@
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>
-        <i class="fa fa-laptop-code fa-2x text-primary position-absolute top-50 start-50 translate-middle"></i>
+        <img class="logo position-absolute top-50 start-50 translate-middle" src="img/logo.png">
     </div>
     <!-- Spinner End -->
 
@@ -126,58 +126,58 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <a href="{{ route('home') }}" class="nav-item nav-link">Home</a>
-            <a href="{{ route('about') }}" class="nav-item nav-link">About Us</a>
-            <a href="{{ route('service') }}" class="nav-item nav-link">Services</a>
-            <a href="{{ route('project') }}" class="nav-item nav-link">Projects</a>
-            <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
-                    <a href="{{ route('feature') }}" class="dropdown-item">Features</a>
-                    <a href="{{ route('team') }}" class="dropdown-item">Our Team</a>
-                    <a href="{{ route('testimonial') }}" class="dropdown-item">Testimonial</a>
-                    <a href="{{ url('404') }}" class="dropdown-item active">404 Page</a> <!-- Assuming '404.html' is a static page -->
+            <div class="navbar-nav me-auto p-3 p-lg-0">
+                <a href="{{ route('home') }}" class="nav-item nav-link">Home</a>
+                <a href="{{ route('about') }}" class="nav-item nav-link">About Us</a>
+                <a href="{{ route('service') }}" class="nav-item nav-link">Services</a>
+                <a href="{{ route('project') }}" class="nav-item nav-link">Projects</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
+                        <a href="{{ route('feature') }}" class="dropdown-item">Features</a>
+                        <a href="{{ route('team') }}" class="dropdown-item">Our Team</a>
+                        <a href="{{ route('testimonial') }}" class="dropdown-item">Testimonial</a>
+                       
+                    </div>
                 </div>
+                <a href="{{ route('contact') }}" class="nav-item nav-link">Contact Us</a>                
             </div>
-            <a href="{{ route('contact') }}" class="nav-item nav-link">Contact Us</a>            
-            </div>
-            <a href="#" class="btn btn-sm btn-light rounded-pill py-2 px-4 d-none d-lg-block">Get Started</a>
+            <a href="{{route('contact')}}" class="btn btn-sm btn-light rounded-pill py-2 px-4 d-none d-lg-block">Get Started</a>
         </div>
     </nav>
     <!-- Navbar End -->
 
 
     <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center py-5">
-            <h1 class="display-4 text-white animated slideInDown mb-3">404 Page</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">404 Page</li>
-                </ol>
-            </nav>
-        </div>
+   <!-- Page Header Start -->
+<div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container text-center py-5">
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                <li class="breadcrumb-item text-primary active" aria-current="page">Email Success</li>
+            </ol>
+        </nav>
     </div>
-    <!-- Page Header End -->
+</div>
+<!-- Page Header End -->
 
-
-    <!-- 404 Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container text-center">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <i class="bi bi-exclamation-triangle display-1 text-primary"></i>
-                    <h1 class="display-1">404</h1>
-                    <h1 class="mb-4">Page Not Found</h1>
-                    <p class="mb-4">We’re sorry, the page you have looked for does not exist in our website! Maybe go to our home page or try to use a search?</p>
-                    <a class="btn btn-primary rounded-pill py-3 px-5" href="">Go Back To Home</a>
-                </div>
+<!-- Success Message Start -->
+<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <i class="bi bi-check-circle display-1 text-primary"></i>
+                <h1 class="display-1 text-success">Success</h1>
+                <h1 class="mb-4">Your Message Has Been Sent!</h1>
+                <p class="mb-4">Thank you for reaching out. Your message has been successfully sent. We will get back to you as soon as possible.</p>
+                <a class="btn btn-primary rounded-pill py-3 px-5" href="{{ url('/') }}">Go Back To Home</a>
             </div>
         </div>
     </div>
-    <!-- 404 End -->
+</div>
+<!-- Success Message End -->
         
 
     <!-- Footer Start -->
@@ -186,9 +186,9 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-light mb-4">Address</h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Cagayan De Oro City</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+63 994 526 4131</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>aihqcorp@gmail.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-square btn-outline-secondary rounded-circle me-1" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-square btn-outline-secondary rounded-circle me-1" href=""><i class="fab fa-facebook-f"></i></a>
@@ -229,7 +229,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-light mb-4">Newsletter</h5>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <p>Message Us</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control bg-transparent border-secondary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
                         <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
@@ -241,12 +241,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a href="#">Your Site Name</a>, All Right Reserved.
+                        &copy; <a href="#">AI HQ CORP</a>, All Right Reserved.
                     </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                    {{-- <div class="col-md-6 text-center text-md-end">
                         Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-                    </div>
+                        <br>Distributed By: <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                    </div> --}}
                 </div>
             </div>
         </div>

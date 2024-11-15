@@ -36,7 +36,7 @@
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>
-        <i class="fa fa-laptop-code fa-2x text-primary position-absolute top-50 start-50 translate-middle"></i>
+        <img class="logo position-absolute top-50 start-50 translate-middle" src="img/logo.png">
     </div>
     <!-- Spinner End -->
 
@@ -137,13 +137,13 @@
                         <a href="{{ route('feature') }}" class="dropdown-item">Features</a>
                         <a href="{{ route('team') }}" class="dropdown-item">Our Team</a>
                         <a href="{{ route('testimonial') }}" class="dropdown-item">Testimonial</a>
-                        <a href="{{ url('404.html') }}" class="dropdown-item">404 Page</a> <!-- Assuming '404.html' is a static page -->
+                      
                     </div>
                 </div>
                 <a href="{{ route('contact') }}" class="nav-item nav-link active">Contact Us</a>
 
             </div>
-            <a href="#" class="btn btn-sm btn-light rounded-pill py-2 px-4 d-none d-lg-block">Get Started</a>
+            <a href="{{route('contact')}}" class="btn btn-sm btn-light rounded-pill py-2 px-4 d-none d-lg-block">Get Started</a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -170,34 +170,35 @@
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <h6 class="section-title bg-white text-center text-primary px-3">Contact Us</h6>
-                <h1 class="display-6 mb-4">If You Have Any Query, Please Feel Free Contact Us</h1>
+                <h1 class="display-6 mb-4">Have a Project in Mind? Let's Bring Your Vision to Life!</h1>
             </div>
             <div class="row g-0 justify-content-center">
                 <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.5s">
-                    <p class="text-center mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
-                    <form>
+                    <p class="text-center mb-4">We're here to answer your questions about custom website solutions and digital services tailored to your needs. Share your project details, and let’s discuss how we can create something exceptional together. Reach out to start the conversation.</p>
+                    <form action="{{ route('contact.send') }}" method="POST">
+                        @csrf
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
                                     <label for="name">Your Name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
                                     <label for="email">Your Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
                                     <label for="subject">Subject</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 200px"></textarea>
+                                    <textarea class="form-control" id="message" name="message" placeholder="Leave a message here" style="height: 200px" required></textarea>
                                     <label for="message">Message</label>
                                 </div>
                             </div>
@@ -210,8 +211,196 @@
             </div>
         </div>
     </div>
+    
+    
     <!-- Contact End -->
 
+        <!-- Team Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h6 class="section-title bg-white text-center text-primary px-3">Connect With Us</h6>
+                    <h1 class="display-6 mb-4">Launch Skype, Facebook and Telegram to chat or call our Account Executives</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item text-center p-4">
+                            <img class="img-fluid border rounded-circle w-75 p-2 mb-4" src="img/team-1.jpg" alt="">
+                            <div class="team-text">
+                                <div class="team-title">
+                                    <h5>Reynand Sabas</h5>
+                                    <span>Marketing</span>
+                                </div>
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-primary rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle" href=""><i class="fab fa-telegram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="team-item text-center p-4">
+                            <img class="img-fluid border rounded-circle w-75 p-2 mb-4" src="img/team-2.jpg" alt="">
+                            <div class="team-text">
+                                <div class="team-title">
+                                    <h5>Jenny Batal</h5>
+                                    <span>Developer</span>
+                                </div>
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-primary rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle" href=""><i class="fab fa-telegram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="team-item text-center p-4">
+                            <img class="img-fluid border rounded-circle w-75 p-2 mb-4" src="img/team-3.jpg" alt="">
+                            <div class="team-text">
+                                <div class="team-title">
+                                    <h5>Jerome Porcado</h5>
+                                    <span>Developer</span>
+                                </div>
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-primary rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle" href=""><i class="fab fa-telegram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="team-item text-center p-4">
+                            <img class="img-fluid border rounded-circle w-75 p-2 mb-4" src="img/team-4.jpg" alt="">
+                            <div class="team-text">
+                                <div class="team-title">
+                                    <h5>Kim John Sagala</h5>
+                                    <span>Developer</span>
+                                </div>
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-primary rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle" href=""><i class="fab fa-telegram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.9s">
+                        <div class="team-item text-center p-4">
+                            <img class="img-fluid border rounded-circle w-75 p-2 mb-4" src="img/team-5.jpg" alt="">
+                            <div class="team-text">
+                                <div class="team-title">
+                                    <h5>Jireh Magallanes</h5>
+                                    <span>Developer</span>
+                                </div>
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-primary rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary rounded-circle" href=""><i class="fab fa-telegram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+
+     <!-- Project Start -->
+     <div id="project" class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h6 class="section-title bg-white text-center text-primary px-3">Our Projects</h6>
+                <h1 class="display-6 mb-4">Learn More About Our Complete Projects</h1>
+            </div>
+            <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="project-item border rounded h-100 p-4" data-dot="01">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded" src="img/project-1.jpg" alt="">
+                        <a href="img/project-1.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
+                    </div>
+                    <h6>Ginto AI</h6>
+                    <span>Assistance AI project</span>
+                </div>
+                <div class="project-item border rounded h-100 p-4" data-dot="02">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded" src="img/project-2.jpg" alt="">
+                        <a href="img/project-2.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
+                    </div>
+                    <h6>ArtQ AI</h6>
+                    <span>AI Image Generation</span>
+                </div>
+                <div class="project-item border rounded h-100 p-4" data-dot="03">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded" src="img/project-3.jpg" alt="">
+                        <a href="img/project-2.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
+                    </div>
+                    <h6>QR System</h6>
+                    <span>QR code-based attendance system</span>
+                </div>
+                <div class="project-item border rounded h-100 p-4" data-dot="04">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded" src="img/project-4.jpg" alt="">
+                        <a href="img/project-4.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
+                    </div>
+                    <h6>Ecommerce Website</h6>
+                    <span>Online shopping platform</span>
+                </div>
+                <div class="project-item border rounded h-100 p-4" data-dot="05">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded" src="img/project-5.jpg" alt="">
+                        <a href="img/project-5.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
+                    </div>
+                    <h6>Software Solutions</h6>
+                    <span>Custom software development for businesses</span>
+                </div>
+                <div class="project-item border rounded h-100 p-4" data-dot="06">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded" src="img/project-6.jpg" alt="">
+                        <a href="img/project-6.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
+                    </div>
+                    <h6>Website Development</h6>
+                    <span>Professional business websites</span>
+                </div>
+                <div class="project-item border rounded h-100 p-4" data-dot="07">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded" src="img/project-7.jpg" alt="">
+                        <a href="img/project-7.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
+                    </div>
+                    <h6>Portfolio Website</h6>
+                    <span>Showcase for individual portfolios</span>
+                </div>
+                <div class="project-item border rounded h-100 p-4" data-dot="08">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded" src="img/project-8.jpg" alt="">
+                        <a href="img/project-8.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
+                    </div>
+                    <h6>Business Solutions</h6>
+                    <span>Complete web solutions for business needs</span>
+                </div>
+                <div class="project-item border rounded h-100 p-4" data-dot="09">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded" src="img/project-9.jpg" alt="">
+                        <a href="img/project-9.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
+                    </div>
+                    <h6>Marketing Website</h6>
+                    <span>Websites focused on marketing solutions</span>
+                </div>
+                <div class="project-item border rounded h-100 p-4" data-dot="10">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded" src="img/project-10.jpg" alt="">
+                        <a href="img/project-10.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
+                    </div>
+                    <h6>Landing Page</h6>
+                    <span>High-conversion landing pages</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Project End -->
 
     <!-- Google Map Start -->
     <div class="container-xxl pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
